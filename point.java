@@ -2,7 +2,7 @@
  * Class to implement 3d point object
  * Author:	Brett Nelson
  * Date:	7/7/2016
- * /
+**/
 public class point {
 	
 	//instance variables to represent standard cartesian coordinates
