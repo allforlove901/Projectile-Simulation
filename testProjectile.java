@@ -1,17 +1,21 @@
 import javax.swing.JFrame;
 import javax.swing.JComponent;
 import java.awt.Graphics2D;
-import java.awt.geom.Ellipse2D;
 import java.awt.Color;
 
+/**
+   Class to test simulation of projectile motion
+   Author:	Brett Nelson
+   Date:	7/7/2016
+ */
 public class testProjectile {
 
-	//main method
+	//Main method
 	public static void main(String[] args) {
 		
+		//creates new JFrame window
 		JFrame frame = new JFrame();
-		frame.setVisible(true);	
-
+		frame.setVisible(true);
 		frame.setSize(600, 400);
 		frame.setTitle("Projectile Simulation");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,7 +31,7 @@ public class testProjectile {
 		//delay animation for half a sec
 		while(System.currentTimeMillis()-startTime < 500){}
 		
-		//begin simulation
+		//Run simulation
 		while(System.currentTimeMillis()-startTime < timeInterval + 500){
 			if(System.currentTimeMillis()%1 == 0){
 				point p3 = pro.findPosition(System.currentTimeMillis()-(startTime+500), timeInterval, p1, p2);
